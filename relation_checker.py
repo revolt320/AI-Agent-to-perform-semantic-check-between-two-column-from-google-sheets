@@ -79,12 +79,12 @@ if uploaded_file:
         columns = df.columns.tolist()
         
         category_col = st.sidebar.selectbox(
-            "Select CATEGORY column",
+            "Select Column 1",
             columns
         )
         
         search_col = st.sidebar.selectbox(
-            "Select SEARCH CATEGORY column",
+            "Select Column 2",
             columns,
             index=1 if len(columns) > 1 else 0
         )
@@ -183,4 +183,4 @@ if uploaded_file:
                     mime="text/csv"
                 )
 else:
-    st.info("👈 Please upload a CSV file to get started.")
+    st.info("Please upload a CSV file to get started.")
